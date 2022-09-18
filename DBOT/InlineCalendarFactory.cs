@@ -81,7 +81,7 @@ namespace DBOT
                     if (date.Month < 10)
                         month = "0" + date.Month.ToString();
 
-                    if (n < 10)
+                    if (i < 10)
                         day = "0" + i.ToString();
 
                     callbackDate += month + day + "m:" + editingMessageId.ToString();

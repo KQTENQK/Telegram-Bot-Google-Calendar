@@ -22,7 +22,7 @@ namespace DBOT.BotAnswer
         /// </summary>
         public static string FormUpReport(Events events, string title)
         {
-            string report = title;
+            string report = title + "\n";
 
             if (events.Items == null || events.Items.Count <= 0)
                 return string.Empty;
@@ -45,7 +45,7 @@ namespace DBOT.BotAnswer
                 if (!String.IsNullOrEmpty(eventItem.Location))
                     location = "\nМесто:  " + eventItem.Location;
 
-                report += "\n\r" + eventItem.Summary + "\nДата:  " + date + "\nВремя:  " + time + location + "\n";
+                report += eventItem.Summary + "\nДата:  " + date + "\nВремя:  " + time + location + "\n";
             }
 
             return report;
